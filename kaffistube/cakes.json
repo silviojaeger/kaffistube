@@ -1,0 +1,23 @@
+{
+    "1": {
+        "name": "Silvio Jäger",
+        "art": "Kuchen",
+        "date": "17.10.2018",
+        "mail": "silvio.ja@testing.com",
+        "notes": "Schoggikuchen mit schoggigeschmack"
+    },
+    "2": {
+        "name": "Max Muster",
+        "art": "Torte",
+        "date": "18.10.2018",
+        "mail": "silvio.ja@testing.com",
+        "notes": "Eine Schwarzwäldertorte aus dem Schwarzwald"
+    },
+    "3": {
+        "name": "Max Postman",
+        "art": "Kuchen",
+        "date": "18.10.2018",
+        "mail": "silvio.ja@postman.com",
+        "notes": "Bananenkuchen"
+    }
+}

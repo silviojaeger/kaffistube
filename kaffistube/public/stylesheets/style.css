@@ -1,8 +1,11 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#headpic {
+  width: 100%;
 }
 
-a {
-  color: #00B7FF;
+#infotext {
+  font-size: 1.1em;
+}
+
+h3 {
+  margin-top: 2em;
 }

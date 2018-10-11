@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
+var path = require('path');
 
 /* Cake.json PATH */
-var cakePath = '/home/pi/kaffistube/kaffistube/kaffistube/';  //Linux:  /home/pi/kaffistube/kaffistube/kaffistube
+var cakePath = '/home/pi/kaffistube/kaffistube/kaffistube/';  //Linux:  /home/pi/kaffistube/kaffistube/kaffistube/
 
-/* GET home page. */
+/*GET Homepage*/
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Kaffistube' });
 });
 
 /* GET cakes */
@@ -30,10 +31,6 @@ router.post('/cake', function(req, res, next) {
     res.send(cakesJson);
 });
 
-/* Own functions */
-function createIndex(){
-  
-}
 
 
 module.exports = router;

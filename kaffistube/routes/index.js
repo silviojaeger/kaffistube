@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 
 /* Cake.json PATH */
-var cakePath = '';  //Linux:  /home/pi/kaffistube/kaffistube/kaffistube/
+var cakePath = '/home/pi/kaffistube/kaffistube/kaffistube/';  //Linux:  /home/pi/kaffistube/kaffistube/kaffistube/
 
 /*GET Homepage*/
 router.get('/', function(req, res, next) {

@@ -11,9 +11,6 @@ document.getElementById("17.11").addEventListener("click",function(){
 document.getElementById("24.11").addEventListener("click",function(){
     startWriting(24);
 });
-document.getElementById("sendInfos").addEventListener("click",function(){
-    checkInput();
-});
 
 document.getElementById("finishBtn").addEventListener("click",function(){
     cleanTables();
@@ -66,10 +63,6 @@ function startWriting(date){
     
 }
 
-function checkInput(){
-    //CHeck the Input here-------------------------------------------------------------------------------------
-    sendToServer();
-}
 
 //HTTP POST to server
 function sendToServer(){

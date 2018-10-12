@@ -14,7 +14,11 @@ router.get('/', function(req, res, next) {
 /* GET cakes */
 router.get('/cake', function(req, res, next) {
   var cakesJson = JSON.parse(fs.readFileSync(cakePath+'cakes.json', 'utf8'));
-  console.log('Sicherheitslücke.....Client erhällt auch alle Email Adressen...noch fixen');
+  //Remove the email Adresses...safety first!
+  for (let i in cakesJson){
+    delete cakesJson[i].mail;
+  }
+  //send the JSON file
   res.json(cakesJson);
 });
 

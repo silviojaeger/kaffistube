@@ -16,7 +16,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="images/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="images/logo.jpg" width="40" height="40" class="d-inline-block align-top" alt="">
         Kaffistube
       </a>
     </nav>
@@ -93,10 +93,10 @@
       </div>
       <div class="modal-body">
         <!-- FORM -->
-        <form>
+        <form onsubmit="sendToServer()">
           <div class="form-group">
             <label for="exampleInputName">Name</label>
-            <input class="form-control" id="exampleInputName"  placeholder="Name" type="text">
+            <input class="form-control" id="exampleInputName"  placeholder="Name" type="text" required>
           </div>
           <div class="form-group">
             <label for="exampleFormControlSelect1">Kuchen / Torte / Dessert</label>
@@ -107,19 +107,17 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="exampleInputMail">Email</label>
-            <input type="email" class="form-control" id="exampleInputMail" placeholder="beispiel@mail.com">
+            <label for="exampleInputNotes">Beschreibung</label>
+            <input type="text" class="form-control" id="exampleInputNotes" placeholder="z.B. Schokoladenkuchen" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputNotes">Beschreibung(Optional)</label>
-            <input type="text" class="form-control" id="exampleInputNotes" placeholder="Beschreibung">
+            <label for="exampleInputMail">Email</label>
+            <input type="email" class="form-control" id="exampleInputMail" placeholder="beispiel@mail.com" required>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
-        <button id='sendInfos' type="submit" class="btn btn-primary">Eintragen</button>
-      </div>
+          <button id='sendInfos' type="submit" class="btn btn-primary">Eintragen</button>
+          <button id="canceling" type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+      </form>
+    </div>
     </div>
   </div>
 </div>

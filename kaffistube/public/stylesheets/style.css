@@ -1,11 +1,17 @@
 #headpic {
   width: 100%;
+  margin-bottom: 2em;
 }
 
 #infotext {
   font-size: 1.1em;
 }
 
-h3 {
-  margin-top: 2em;
+.container-fluid {
+  margin-bottom: 3em;
+}
+
+#canceling, #sendInfos {
+  float: right;
+  margin-left: 0.3em;
 }

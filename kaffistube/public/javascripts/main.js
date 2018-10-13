@@ -80,11 +80,9 @@ function sendToServer(){
         contentType: 'application/json',
         data: JSON.stringify(myJson),
         processData: false,
-    }).always(function(){
+    }).done(function(){
         $('#exampleModalCenter').modal('toggle');
-        setTimeout(function(){
             $('#thankyoumodal').modal('toggle');
-        },200); 
     });
 }
 

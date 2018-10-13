@@ -63,7 +63,11 @@ function startWriting(date){
     document.getElementById('dateName').innerHTML = 'Einschreiben für den '+date+'.11.2018';
     
 }
-
+//Submit the Form; The callback function always gives false, so the page doenst reload
+$('#cakeForm').submit(function(){
+    sendToServer();
+    return false;
+});
 
 //HTTP POST to server
 function sendToServer(){

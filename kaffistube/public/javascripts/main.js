@@ -1,5 +1,6 @@
 //global variables
 var actualDate = 0; //Day as intiger
+var justSubmitted = false;
 
 //Button EventListener
 document.getElementById("16.11").addEventListener("click",function(){
@@ -80,11 +81,21 @@ function sendToServer(){
         contentType: 'application/json',
         data: JSON.stringify(myJson),
         processData: false,
-    }).done(function(){
+    }).always(function(){
+        justSubmitted = true;
         $('#exampleModalCenter').modal('toggle');
-            $('#thankyoumodal').modal('toggle');
     });
 }
+
+
+//Open the thankyoumodal
+$('#exampleModalCenter').on('hidden.bs.modal', function () {
+    console.log('OPEN THE THANKYOUMODAL');
+    if(justSubmitted){
+        $('#thankyoumodal').modal('toggle');
+    }
+    justSubmitted = false;
+})
 
 //when somene click the modal away! Wer ready for that dude
 $('#thankyoumodal').on('hidden.bs.modal', function () {

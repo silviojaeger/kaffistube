@@ -51,10 +51,15 @@ function appendCake(value){
     let tablerow = `<tr>
                         <th>${(actNumber+1)}</th>
                         <td>${value.name}</td>
+                        <td>${value.riege}</td>
                         <td>${value.art}</td>
                         <td>${value.notes}</td>
                     </tr>`
     $(actId).append(tablerow);
+
+    //Sets the counter
+    actId = actId+"counter";
+    $(actId).html((actNumber+1)+'/16');
 }
 
 //Open MODAL for the Form
@@ -73,6 +78,7 @@ $('#cakeForm').submit(function(){
 function sendToServer(){
     let myJson = new Object();
     myJson.name = $('#exampleInputName').val();
+    myJson.riege = $('#riege').val();
     myJson.art = $('#exampleFormControlSelect1').val();
     myJson.date = actualDate+'112018';
     myJson.mail = $('#exampleInputMail').val();
